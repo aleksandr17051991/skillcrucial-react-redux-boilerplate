@@ -50,6 +50,8 @@ const RootComponent = (props) => {
           <Switch>
             <Route exact path="/" component={DummyView} />
             <Route exact path="/dashboard" component={Home} />
+            <Route exact path="/planet/" component={Home} />          {/* added new path with param (week11 React-Router) */}
+            <Route exact path="/planet/:planetId" component={Home} /> {/* added new path with param (week11 React-Router) */}
             <PrivateRoute exact path="/hidden-route" component={DummyView} />
             <OnlyAnonymousRoute exact path="/anonymous-route" component={DummyView} />
 

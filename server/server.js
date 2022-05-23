@@ -39,31 +39,31 @@ middleware.forEach((it) => server.use(it))
 
 // task1
 
-// server.get('/api/v1/users', (req, res) => {  
-//   res.json({ name: 'Oleksandr Oliferchuk' })  
+// server.get('/api/v1/users', (req, res) => {
+//   res.json({ name: 'Oleksandr Oliferchuk' })
 // })
 
 // task2
 
-// server.get('/api/v1/users/:name', (req, res) => {  
-//   const { name } = req.params  
-//   res.json({ name })  
+// server.get('/api/v1/users/:name', (req, res) => {
+//   const { name } = req.params
+//   res.json({ name })
 // })
 
 // task3
 
-// server.get('/api/v1/users/', async (req, res) => {  
-//   const { data: users } = await axios('https://jsonplaceholder.typicode.com/users')  
-//   res.json(users)  
+// server.get('/api/v1/users/', async (req, res) => {
+//   const { data: users } = await axios('https://jsonplaceholder.typicode.com/users')
+//   res.json(users)
 // })
 
 // task4
 
-// server.get('/api/v1/users/take/:number', async (req, res) => {  
-//   const { number } = req.params  
-//   const { data: users } = await axios('https://jsonplaceholder.typicode.com/users')  
-//   res.json(users.slice(0, +number))  
-// })
+server.get('/api/v1/users/take/:number', async (req, res) => {
+  const { number } = req.params
+  const { data: users } = await axios('https://jsonplaceholder.typicode.com/users')
+  res.json(users.slice(0, +number))
+})
 
 server.use('/api/', (req, res) => {
   res.status(404)
