@@ -8,7 +8,7 @@ const Dummy = () => (
     <div className="flex fd-column justify-center items-center h-screen">
       <div className="flex flex-col justify-center bg-neutral-900 p-10 rounded-xl select-none">
         <img alt="wave" src="images/logo-new-text.png" />
-        <span className="text-white text-right font-semibold">Boilerplate</span>
+        <span className="text-white text-right font-semibold">BOIlERPLATE</span>
       </div>
 
       { /* Added new router link week11 React-Router */}
